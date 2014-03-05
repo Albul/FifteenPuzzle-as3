@@ -39,11 +39,11 @@ package game.view {
 //
 //-------------------------------------------------------------------------------------------------
 
-		public static function createView(model:Model, container:Sprite, dimensional:Boolean):View {
-			var view:View = (dimensional == Constants.d2)? new View2D(model, container) :
+        public static function createView(model:Model, container:Sprite, dimensional:Boolean):View {
+            var view:View = (dimensional == Constants.d2)? new View2D(model, container) :
                     new View3D(model, container);
-			return view;
-		}
+            return view;
+        }
 
         public function dispouse():void {
         }
@@ -59,5 +59,5 @@ package game.view {
         public function get bExit():Button {
             return _bExit;
         }
-	}
+    }
 }
