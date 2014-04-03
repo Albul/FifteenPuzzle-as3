@@ -80,7 +80,6 @@ package states {
 			dispatchEvent(new EventState(EventState.CHANGE_STATE, StateManager.STATE_MENU));
 		}
 
-
 //-------------------------------------------------------------------------------------------------
 //
 //  Overrides methods
