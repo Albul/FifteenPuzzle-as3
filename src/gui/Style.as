@@ -15,35 +15,35 @@
  */
 package gui {
 
-	public class Style extends Object {
+public class Style extends Object {
 
-        // Text constants
-        public static const FONT_SIZE:String = "fontSize";
-		public static const FONT:String = "font";
-        public static const COLOR_TEXT:String = "colorText";
-		public static const ALIGN:String = "align";
-		public static const IS_BOLD:String = "isBold";
-		public static const IS_ITALIC:String = "isItalic";
-		public static const IS_MULTILINE:String = "isMultiline";
-		public static const AUTO_SIZE:String = "autoSize";
+	// Text constants
+	public static const FONT_SIZE:String = "fontSize";
+	public static const FONT:String = "font";
+	public static const COLOR_TEXT:String = "colorText";
+	public static const ALIGN:String = "align";
+	public static const IS_BOLD:String = "isBold";
+	public static const IS_ITALIC:String = "isItalic";
+	public static const IS_MULTILINE:String = "isMultiline";
+	public static const AUTO_SIZE:String = "autoSize";
 
-		// Background
-        public static const COLOR_BG:String = "colorBg";
-        public static const COLOR_BG_OVER:String = "colorBgOver";
-        public static const COLOR_BG_DOWN:String = "colorBgDown";
-        public static const ALPHA_BG:String = "alphaBg";
+	// Background
+	public static const COLOR_BG:String = "colorBg";
+	public static const COLOR_BG_OVER:String = "colorBgOver";
+	public static const COLOR_BG_DOWN:String = "colorBgDown";
+	public static const ALPHA_BG:String = "alphaBg";
 
-		// Border
-        public static const THICKNESS_BORDER:String = "thicknessBorder";
-        public static const COLOR_BORDER:String = "colorBorder";
-        public static const COLOR_BORDER_OVER:String = "colorBorderOver";
-        public static const ALPHA_BORDER:String = "alphaBorder";
+	// Border
+	public static const THICKNESS_BORDER:String = "thicknessBorder";
+	public static const COLOR_BORDER:String = "colorBorder";
+	public static const COLOR_BORDER_OVER:String = "colorBorderOver";
+	public static const ALPHA_BORDER:String = "alphaBorder";
 
-		// Size
-		public var width:Number;
-		public var height:Number;
-		public var deltaWidth:Number;
-		public var deltaHeight:Number;
-		public var sizeRound:int;
-	}
+	// Size
+	public var width:Number;
+	public var height:Number;
+	public var deltaWidth:Number;
+	public var deltaHeight:Number;
+	public var sizeRound:int;
+}
 }

@@ -14,86 +14,65 @@
  * limitations under the License.
  */
 package gui {
-    import flash.display.Sprite;
-    import flash.text.TextField;
-    import flash.text.TextFormat;
+import flash.display.Sprite;
+import flash.text.TextField;
+import flash.text.TextFormat;
 
-    public class StyledTextField extends Sprite {
+public class StyledTextField extends Sprite {
 
-        private var tf:TextField;
+	private var tf:TextField;
 
-        public static function Create(width:Number, height:Number, style:Object):StyledTextField {
+	public static function Create(width:Number, height:Number, style:Object):StyledTextField {
 
-            return new StyledTextField(style.colorBg, style.colorBorder, style.thicknessBorder, style.alphaBg,
-                    style.sizeRound,
-                    (width != 0? width : style.width),
-                    (height != 0? height : style.height),
-                    style.autoSize,
-                    style.isMultiline,
-                    style.sizeFont,
-                    style.font,
-                    style.colorText,
-                    style.isBold,
-                    style.isItalic,
-                    style.align,
-                    style.verticalAlign);
-        }
+		return new StyledTextField(style.colorBg, style.colorBorder, style.thicknessBorder, style.alphaBg,
+				style.sizeRound, (width != 0? width : style.width), (height != 0? height : style.height),
+				style.autoSize, style.isMultiline, style.sizeFont, style.font, style.colorText, style.isBold,
+				style.isItalic, style.align, style.verticalAlign);
+	}
 
 
-        public function StyledTextField(colorBg:uint = 0xFFFFFF, colorBorder:uint = 0x000000,
-                                        thicknessBorder:Number = 2,
-                                        alphaBg:Number = 1,
-                                        sizeRound:Number = 0,
-                                        width:Number = 0,
-                                        height:Number = 0,
-                                        autoSize:String = "left",
-                                        isMultiline:Boolean = false,
-                                        sizeFont:int = 14,
-                                        font:String = "Arial",
-                                        colorText:uint = 0xDBF224,
-                                        isBold:Boolean = false,
-                                        isItalic:Boolean = false,
-                                        align:String = "left",
-                                        verticalAlign:String = "center") {
+	public function StyledTextField(colorBg:uint = 0xFFFFFF, colorBorder:uint = 0x000000, thicknessBorder:Number = 2,
+									alphaBg:Number = 1, sizeRound:Number = 0, width:Number = 0, height:Number = 0,
+									autoSize:String = "left", isMultiline:Boolean = false, sizeFont:int = 14,
+									font:String = "Arial", colorText:uint = 0xDBF224, isBold:Boolean = false,
+									isItalic:Boolean = false, align:String = "left", verticalAlign:String = "center") {
 
-            this.graphics.beginFill(colorBg, alphaBg);
-            if (thicknessBorder > 0)
-                this.graphics.lineStyle(thicknessBorder, colorBorder, 1, true);
-            this.graphics.drawRoundRect(0, 0, width, height, sizeRound);
-            this.graphics.endFill();
+		this.graphics.beginFill(colorBg, alphaBg);
+		if (thicknessBorder > 0)
+			this.graphics.lineStyle(thicknessBorder, colorBorder, 1, true);
+		this.graphics.drawRoundRect(0, 0, width, height, sizeRound);
+		this.graphics.endFill();
 
-            tf = new TextField();
-            tf.antiAliasType = "advanced";
-            tf.autoSize = autoSize;
-            tf.multiline = isMultiline;
-            tf.selectable = false;
+		tf = new TextField();
+		tf.antiAliasType = "advanced";
+		tf.autoSize = autoSize;
+		tf.multiline = isMultiline;
+		tf.selectable = false;
 
-            tf.defaultTextFormat = new TextFormat(font, sizeFont, colorText, isBold, isItalic, false,
-                                                    null, null, align);
+		tf.defaultTextFormat = new TextFormat(font, sizeFont, colorText, isBold, isItalic, false, null, null, align);
 
-            tf.x = 5;
-            if (verticalAlign == "top") {
-                tf.y = 0;
-            } else if (verticalAlign == "center") {
-                tf.text = "100";
-                tf.y = (height - tf.textHeight) / 2;
-                tf.text = "";
-            }
+		tf.x = 5;
+		if (verticalAlign == "top") {
+			tf.y = 0;
+		} else if (verticalAlign == "center") {
+			tf.text = "100";
+			tf.y = (height - tf.textHeight) / 2;
+			tf.text = "";
+		}
 
-            this.addChild(tf);
-        }
+		this.addChild(tf);
+	}
 
-        public function get text():String {
-            return tf.htmlText;
-        }
+	public function get text():String {
+		return tf.htmlText;
+	}
 
-        public function set text(value:String):void {
-            tf.htmlText = value;
-        }
+	public function set text(value:String):void {
+		tf.htmlText = value;
+	}
 
-        public function get textField():TextField {
-            return tf;
-        }
-
-    }
+	public function get textField():TextField {
+		return tf;
+	}
+}
 }

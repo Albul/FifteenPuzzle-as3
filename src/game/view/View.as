@@ -15,23 +15,22 @@
  */
 package game.view {
 
-    import flash.display.Sprite;
+import flash.display.Sprite;
 
-    import game.model.Constants;
-    import game.model.Model;
+import game.model.Constants;
+import game.model.Model;
 
-    import gui.Button;
+import gui.Button;
 
-    public class View extends Sprite {
+public class View extends Sprite {
 
-        protected const DURATION:Number = 0.3;
+	protected const DURATION:Number = 0.3;
 
-        protected var _boxes:Array;
-        protected var _bExit:Button;
+	protected var _boxes:Array;
+	protected var _bExit:Button;
 
-        public function View() {
-        }
-
+	public function View() {
+	}
 
 //-------------------------------------------------------------------------------------------------
 //
@@ -39,25 +38,25 @@ package game.view {
 //
 //-------------------------------------------------------------------------------------------------
 
-        public static function createView(model:Model, container:Sprite, dimensional:Boolean):View {
-            var view:View = (dimensional == Constants.d2)? new View2D(model, container) :
-                    new View3D(model, container);
-            return view;
-        }
+	public static function createView(model:Model, container:Sprite, dimensional:Boolean):View {
+		var view:View = (dimensional == Constants.d2)? new View2D(model, container) :
+				new View3D(model, container);
+		return view;
+	}
 
-        public function dispouse():void {
-        }
+	public function dispouse():void {
+	}
 
-        public function get boxes():Array {
-            return _boxes;
-        }
+	public function get boxes():Array {
+		return _boxes;
+	}
 
-        public function getNumBox(box:*):int {
-            return NaN;
-        }
+	public function getNumBox(box:*):int {
+		return NaN;
+	}
 
-        public function get bExit():Button {
-            return _bExit;
-        }
-    }
+	public function get bExit():Button {
+		return _bExit;
+	}
+}
 }

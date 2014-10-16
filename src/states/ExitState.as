@@ -14,23 +14,15 @@
  * limitations under the License.
  */
 package states {
-    import flash.system.fscommand;
+import flash.system.fscommand;
 
-    public class ExitState extends BaseState {
+public class ExitState extends BaseState {
 
-        public function ExitState() {
-        }
+	public function ExitState() {
+	}
 
-
-//-------------------------------------------------------------------------------------------------
-//
-//  Overrides methods
-//
-//-------------------------------------------------------------------------------------------------
-
-        override public function enterState(params:Object = null):void {
-            fscommand("quit");
-        }
-
-    }
+	override public function enterState(params:Object = null):void {
+		fscommand("quit");
+	}
+}
 }

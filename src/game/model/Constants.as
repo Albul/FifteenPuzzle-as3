@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 package game.model {
-    public class Constants {
-        public static var d2:Boolean = true;
-        public static var d3:Boolean = false;
-    }
+public class Constants {
+	public static var d2:Boolean = true;
+	public static var d3:Boolean = false;
+}
 }

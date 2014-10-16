@@ -14,38 +14,37 @@
  * limitations under the License.
  */
 package states {
-	import flash.events.Event;
-	
-	public class EventState extends Event {
-		
-		static public const CHANGE_STATE:String = "changeState";
-		
-		private var _toState:String;
-		private var _params:Object;
+import flash.events.Event;
 
-		public function EventState(type:String, toState:String, params:Object = null,
-                                   bubbles:Boolean = false, cancelable:Boolean = false) {
-			super(type, bubbles, cancelable);
-			
-			_toState = toState;
-            _params = params;
-		}
+public class EventState extends Event {
 
-		public override function clone():Event { 
-			return new EventState(type, toState, bubbles, cancelable);
-		} 
+	static public const CHANGE_STATE:String = "changeState";
 
-		public override function toString():String { 
-			return formatToString("EventState", "toState", "params", "bubbles", "cancelable", "eventPhase");
-		} 
+	private var _toState:String;
+	private var _params:Object;
 
-		public function get toState():String {
-			return _toState;
-		}
+	public function EventState(type:String, toState:String, params:Object = null,
+							   bubbles:Boolean = false, cancelable:Boolean = false) {
+		super(type, bubbles, cancelable);
 
-        public function get params():Object {
-            return _params;
-        }
-		
+		_toState = toState;
+		_params = params;
 	}
+
+	public override function clone():Event {
+		return new EventState(type, toState, bubbles, cancelable);
+	}
+
+	public override function toString():String {
+		return formatToString("EventState", "toState", "params", "bubbles", "cancelable", "eventPhase");
+	}
+
+	public function get toState():String {
+		return _toState;
+	}
+
+	public function get params():Object {
+		return _params;
+	}
+}
 }

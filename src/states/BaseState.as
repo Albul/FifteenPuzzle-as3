@@ -14,27 +14,19 @@
  * limitations under the License.
  */
 package states {
-    import flash.display.Sprite;
+import flash.display.Sprite;
 
-    public class BaseState extends Sprite {
+public class BaseState extends Sprite {
 
-        public static const PADDING:int = 15;
+	public static const PADDING:int = 15;
 
-        public function BaseState() {
-        }
+	public function BaseState() {
+	}
 
+	public function enterState(params:Object = null):void {
+	}
 
-//-------------------------------------------------------------------------------------------------
-//
-//  Public methods
-//
-//-------------------------------------------------------------------------------------------------
-
-        public function enterState(params:Object = null):void {
-        }
-
-        public function leaveState():void {
-        }
-
-    }
+	public function leaveState():void {
+	}
+}
 }
